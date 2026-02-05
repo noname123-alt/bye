@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Valentine</title>
+  <link rel="stylesheet" href="style.css?v=999">
+</head>
+
+<body>
+
+  <div class="hearts"></div>
+
+  <main class="container">
+    <div class="card">
+
+      <span class="badge">A Simple Question</span>
+
+      <h1>Will you be my <span>Valentine</span>?</h1>
+
+      <p class="question">
+        Not just for a day.<br>
+        But for all the ordinary days too.
+      </p>
+
+      <div class="buttons">
+        <button class="primary"
+          onclick="window.location.href='page3.html'">
+          Yes 💖
+        </button>
+
+        <button class="secondary" id="noBtn">
+          No
+        </button>
+      </div>
+
+      <p class="footer">
+        Think carefully.
+      </p>
+
+    </div>
+  </main>
+
+<script>
+  const texts = [
+    "Think again",
+    "Are you sure?",
+    "Last chance",
+    "marungi ab"
+  ];
+  let i = 0;
+  document.getElementById("noBtn").onclick = function(){
+    this.innerText = texts[i];
+    i = (i + 1) % texts.length;
+  };
+</script>
+
+</body>
+</html>
